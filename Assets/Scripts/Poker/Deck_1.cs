@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Deck : MonoBehaviour
+public class Deck_1 : MonoBehaviour
 {
 	public GameObject mRoot = null;
 	public GameObject mPrefabObj = null;
@@ -19,7 +19,7 @@ public class Deck : MonoBehaviour
 		List<Card> cardList = CardHelper.GetCardShuffleList();
 
 		// 测试排序;
-		//CardHelper.SortCards(cardList);
+		CardHelper.SortCards(cardList);
 
 		// Demo 显示牌信息;
 		for(int i = 0; i < cardList.Count; i++)

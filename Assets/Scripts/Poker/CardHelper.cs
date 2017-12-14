@@ -60,9 +60,9 @@ public static class CardHelper
 
 	#region 根据Card数据结构洗牌;
 	// 返回Card结构的洗牌结果;
-	public static List<Card> GetCardShuffleList()
+	public static List<Card> GetCardShuffleList(bool bJoker = true)
 	{
-		List<Card> cardList = CreateDeck();
+		List<Card> cardList = CreateDeck(bJoker);
 		CardShuffle(cardList);
 		return cardList;
 	}
@@ -82,7 +82,7 @@ public static class CardHelper
 	}
 
 	// 创建棋牌;
-	private static List<Card> CreateDeck()
+	private static List<Card> CreateDeck(bool bJoker)
 	{
 		List<Card> cardList = new List<Card>();
 
@@ -98,7 +98,7 @@ public static class CardHelper
 			}
 		}
 
-		if(mTotalCardCount == 54)
+		if(bJoker)
 		{
 			// 创建大小王扑克;
 			cardList.Add(new Card(Weight.SJoker, Suits.None));
