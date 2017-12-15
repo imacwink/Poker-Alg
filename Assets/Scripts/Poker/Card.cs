@@ -13,6 +13,11 @@ public class Card
 		this.CardSuits = suits;
 	}
 
+	public void SetWeight(Weight weight)
+	{
+		this.CardWeight = weight;
+	}
+
 	public bool Equals(Card other)
 	{
 		return this.CardWeight == other.CardWeight && this.CardSuits == other.CardSuits;

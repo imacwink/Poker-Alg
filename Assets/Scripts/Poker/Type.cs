@@ -15,6 +15,8 @@ public enum Suits
 /// </summary>
 public enum Weight
 {
+	One,
+	Two,
 	Three,
 	Four,
 	Five,
@@ -26,8 +28,6 @@ public enum Weight
 	Jack,
 	Queen,
 	King,
-	One,
-	Two,
 	SJoker,
 	LJoker,
 }
